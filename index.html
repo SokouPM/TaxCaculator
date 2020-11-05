@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>TD 06.4</title>
+        <link rel="stylesheet" href="./css/style.css">
+        <script src="./js/tax.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <div id="user">
+                <a id="e1" href="#">Votre espace particulier</a>
+                <a id="e2" href="#">Votre espace professionnel</a> 
+            </div>   
+            <img class="logo" src="./image/logo.png" alt="Accueil">
+        </header>
+        
+        <nav>
+            <ul class="menu">
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#">Particulier</a></li>
+                <li><a href="#">Professionnel</a></li>
+                <li><a href="#">Partenaire</a></li>
+                <li><a href="#">Collectivité</a></li>
+                <li><a href="#">International</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <form action="#">
+                <fieldset class="outline">
+                    <legend>Veuillez remplir le formulaire</legend> 
+                                       
+                        <label for="lastname">Nom<span class="required">*</span></label>
+                        <input type="text" id="lastname" name="lastname" pattern="{3,20}" required>
+                        <br>
+                        <label for="firstname">Prénom<span class="required">*</span></label>
+                        <input type="text" id="firstname" name="firstname" pattern="{3,20}" required>
+                        <br>
+                        <label for="income">Revenu annuel<span class="required">*</span></label>
+                        <input type="number" id="income" name="income" min="0" value="0" required>
+                        <br>
+                        <label for="status">Statut<span class="required">*</span></label>
+                        <select id="status">
+                            <option value="false">Célibataire</option>
+                            <option value="true">Marié(e)</option>
+                            <option value="false">Divorcé(e)</option>
+                        </select>
+                        <br>
+                        <label for="nbchild">Nb d'enfants<span class="required">*</span></label>
+                        <input type="number" id="nbchild" name="nbchild" min="0" value="0" required>
+                        <br>
+                        <label for="deduction">Déduction<span class="required">*</span></label>
+                        <input type="number" id="deduction" name="deduction" min="0" value="0" required>
+                        <br>
+                        <div>
+                            <input id="valid" type="button" value="Calculer">
+                            <input id="clean" type="reset" value="Effacer">
+                        </div>
+
+
+                </fieldset>
+            </form>
+
+            <div id="result" class="result">
+                <label for="ri">Revenu imposable :</label>
+                <input type="text" id="ri" name="ri" disabled="disabled">
+                <br>
+                <label for="n">Nombre de parts : </label>
+                <input type="text" id="n" name="n" disabled="disabled">
+                <br>
+                <label for="mi">Montant de votre impot : </label>
+                <input type="text" id="mi" name="mi" disabled="disabled">
+            </div>
+        </main>
+
+        <footer>
+            <img src="./image/2.png" alt="">
+            <div id="footfix">
+                <p id="f1">Service-moi.fr | Legimoi.moi.fr</p>
+                <p id="f2">© Moi</p>      
+            </div>
+
+        <script src="./js/event.js"></script>
+        </footer>
+    </body>
+</html>
